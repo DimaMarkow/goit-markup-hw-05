@@ -317,6 +317,27 @@ body {
 .work-list .item {
 	width: 370px;
 	margin: 15px;
+	position: relative;
+}
+
+.black-backgr {
+	width: 370px;
+	height: 70px;
+	background-color: rgba(47, 48, 58, 0.8);
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+.black-backgr-title {
+	padding: 27px 0px;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.14;
+	text-align: center;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	color: #ffffff;
 }
 
 /* team-section */
@@ -573,6 +594,8 @@ body {
 	cursor: pointer;
 }
 
+/* cards */
+
 .card-set {
 	display: flex;
 	flex-wrap: wrap;
@@ -584,6 +607,23 @@ body {
 .card-set > .item {
 	flex-basis: calc(100% / 3 -30px);
 	margin: 15px;
+}
+
+.card-thumb {
+	display: inline-block;
+	position: relative;
+}
+
+.card-thumb::before {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+	background-color: var(--accent);
+	opacity: 0;
 }
 
 .filter-section .card-header {
@@ -611,4 +651,57 @@ body {
 
 .card-set > .item:hover {
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.card-set > .item:hover .card-thumb::before {
+	opacity: 0.9;
+}
+
+.backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.backdrop.is-hidden {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.modal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	min-width: 528px;
+	min-height: 581px;
+
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	background-color: #ffffff;
+}
+
+.modal-close {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+
+	width: 30px;
+	height: 30px;
+
+	background-color: #ffffff;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 50%;
+}
+
+.modal-icon {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	fill: #000;
 }

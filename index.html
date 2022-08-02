@@ -62,7 +62,7 @@
 					<br />
 					YOUR BUSINESS
 				</h1>
-				<button type="button" class="hero-button">Request our service</button>
+				<button data-modal-open type="button" class="hero-button">Request our service</button>
 			</section>
 			<section class="benefits-section section">
 				<div class="container">
@@ -122,12 +122,21 @@
 					<ul class="work-list">
 						<li class="item">
 							<img src="./image/box-1.jpg" alt="ipad on the table" width="370" height="294" />
+						<div class="black-backgr">
+						<p class="black-backgr-title">Десктопні додатки</p>
+						</div>
 						</li>
 						<li class="item">
 							<img src="./image/box-2.jpg" alt="iphone in hand" width="370" height="294" />
+						<div class="black-backgr">
+						<p class="black-backgr-title">Мобільні додатки</p>
+						</div>
 						</li>
 						<li class="item">
 							<img src="./image/box-3.png" alt="ipad in hand" width="370" height="294" />
+						<div class="black-backgr">
+						<p class="black-backgr-title">Дизайнерські рішення</p>
+						</div>
 						</li>
 					</ul>
 				</div>
@@ -395,5 +404,19 @@
 				
 			</div>
 		</footer>
+
+		<div class="backdrop" data-modal>
+			<div class="modal">
+				<button class="modal-close" data-modal-close>
+					<svg class="modal-icon" width="18" height="18">
+						<use href="./image/icons.svg#icon-close-black-18dp-2-1-1">
+						</use>
+
+				</button>
+			</div>
+		</div>
+
+		<script src="./js/modal.js"></script>
+
 	</body>
 </html>
